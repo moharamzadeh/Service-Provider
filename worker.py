@@ -11,7 +11,8 @@ class worker:
 
     def addWork (self, workList = {}):
         for work in workList:
-            self.person[1][work] = 0
+            if self.person[1].get(work) == None:
+                self.person[1][work] = 0
         
         self.updateNWork()
 
