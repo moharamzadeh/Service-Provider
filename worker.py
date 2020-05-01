@@ -9,8 +9,8 @@ class worker:
             # self.workList = workList
         # self.workList[work] = 0
         # self.workList.discard (None)
-        personWork = [self.name, self.workList]
-        worker.nWork.append(personWork)
+        person = [self.name, self.workList]
+        worker.nWork.append(person)
 
     def addWork (self, workList = {}):
         for work in workList:
