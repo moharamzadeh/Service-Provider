@@ -13,12 +13,15 @@ class worker:
         for work in workList:
             self.person[1][work] = 0
         
+        self.updateNWork()
+
+    def changeSalary (self, work, change = 0):
+        self.person[1][work] += change
+
+        self.updateNWork
+
+    def updateNWork (self):
         for person in worker.nWork:
             if person[0] == self.person[0]:
                 person[1].update(self.person[1])
-
-    def changeSalary (self, work, change = 0):
-        pass
-
-    def updateNWork (self):
-        pass
+                break
