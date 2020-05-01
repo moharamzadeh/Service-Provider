@@ -16,9 +16,10 @@ class worker:
         self.updateNWork()
 
     def changeSalary (self, work, change = 0):
-        self.person[1][work] += change
-
-        self.updateNWork
+        if self.person[1].get(work) != None:
+            self.person[1][work] += change
+            self.updateNWork()
+        
 
     def updateNWork (self):
         for person in worker.nWork:
