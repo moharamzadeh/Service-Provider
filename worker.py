@@ -6,7 +6,6 @@ class worker:
         self.workList = workList
         self.workList.add (work)
         self.workList.discard (None)
-        # worker.nWork.update (self.workList)
         personWork = [self.name, self.workList]
         worker.nWork.append(personWork)
 
@@ -14,7 +13,6 @@ class worker:
         self.workList.update (workList)
         self.workList.add (work)
         self.workList.discard (None)
-        # worker.nWork.update (self.workList)
-        for i in worker.nWork:
-            if i[1] == self.name:
-                i[2].update(self.workList)
+        for person in worker.nWork:
+            if person[1] == self.name:
+                person[2].update(self.workList)
