@@ -2,18 +2,23 @@ class worker:
     nWork = []
 
     def __init__ (self, name, workList = {}):
-        self.name = name
-        self.workList = dict()
+        tempWork = dict()
         for work in workList:
-            self.workList[work] = 0
+            tempWork[work] = 0
         
-        person = [self.name, self.workList]
-        worker.nWork.append(person)
+        self.person = [name, tempWork]
+        worker.nWork.append(self.person)
 
     def addWork (self, workList = {}):
         for work in workList:
-            self.workList[work] = 0
+            self.person[1][work] = 0
         
         for person in worker.nWork:
-            if person[1] == self.name:
-                person[2].update(self.workList)
+            if person[0] == self.person[0]:
+                person[1].update(self.person[1])
+
+    def changeSalary (self, work, change = 0):
+        pass
+
+    def updateNWork (self):
+        pass
